@@ -127,6 +127,7 @@ function fnCube(){
 
     function cMove(e){
         e.preventDefault();
+        flag = false;
         var touchMoveX = e.changedTouches[0].pageX;
         var toucheMoveY = e.changedTouches[0].pageY;
          x = (TouchStart.y - toucheMoveY)*step;
