@@ -105,13 +105,13 @@ var fnPhone = {
 
 function fnCube(){
         var TouchStart = {x:0,y:0};
-        var startX = -90;
-        var startY = -90;
+        var startX = -45;
+        var startY = -45;
         var x = 0;
         var y = 0;
         var flag = true;
         cubeBox.style.opacity = 1;
-        cubeBox.style.webkitTransform ='scale(0.5) rotateX(-90deg) rotateY(-90deg)';
+        cubeBox.style.webkitTransform ='scale(0.6) rotateX(-45deg) rotateY(-45deg)';
         cubeBox.addEventListener('webkitTransitionEnd',function(){
             this.style.webkitTransition="";
         },false);
@@ -131,14 +131,14 @@ function fnCube(){
         var toucheMoveY = e.changedTouches[0].pageY;
          x = (TouchStart.y - toucheMoveY);
          y = (touchMoveX - TouchStart.x);
-        if( startX+x > 70 ){
-            x = -startX + 70;
+        if( startX+x > 100 ){
+            x = -startX + 100;
         }
-        else if( startX+x < -70 ){
-            x = -startX - 70;
+        else if( startX+x < -100 ){
+            x = -startX - 100;
         }
 
-        cubeBox.style.webkitTransform = 'scale(0.5) rotateX('+(startX+x)+'deg) rotateY('+(startY+y)+'deg)';
+        cubeBox.style.webkitTransform = 'scale(0.6) rotateX('+(startX+x)+'deg) rotateY('+(startY+y)+'deg)';
     }
 
      function cEnd(e){
