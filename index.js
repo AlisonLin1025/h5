@@ -105,13 +105,13 @@ var fnPhone = {
 
 function fnCube(){
         var TouchStart = {x:0,y:0};
-        var startX = -45;
-        var startY = -45;
+        var startX = -90;
+        var startY = -90;
         var x = 0;
         var y = 0;
         var flag = true;
         cubeBox.style.opacity = 1;
-        cubeBox.style.webkitTransform ='scale(0.5) rotateX(-45deg) rotateY(-45deg)';
+        cubeBox.style.webkitTransform ='scale(0.5) rotateX(-90deg) rotateY(-90deg)';
         cubeBox.addEventListener('webkitTransitionEnd',function(){
             this.style.webkitTransition="";
         },false);
