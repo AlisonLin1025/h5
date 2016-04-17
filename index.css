@@ -236,7 +236,7 @@ html,body{
     top:0;
     position: absolute;
 }
-.cubeBox li:nth-of-type(1){
+/*.cubeBox li:nth-of-type(1){
     background: url(images/cubeImg1.png);
 }
 .cubeBox li:nth-of-type(2){
@@ -267,6 +267,38 @@ html,body{
 .cubeBox li:nth-of-type(6){
     background: url(images/cubeImg6.png);
     -webkit-transform: translateZ(-510px);
+}*/
+.cubeBox li:nth-child(1){
+    background: url(images/cubeImg1.png) no-repeat;
 }
+.cubeBox li:nth-child(2){
+    background: url(images/cubeImg2.png) no-repeat;
+    left:510px;
+    -webkit-transform: rotateY(90deg);
+    -webkit-transform-origin: left;
+}
+.cubeBox li:nth-child(3){
+    background: url(images/cubeImg3.png) no-repeat;
+    left:-510px;
+    -webkit-transform: rotateY(-90deg);
+    -webkit-transform-origin: right;
+}
+.cubeBox li:nth-child(4){
+    background: url(images/cubeImg4.png) no-repeat;
+    top:-510px;
+    -webkit-transform: rotateX(90deg);
+    -webkit-transform-origin:bottom;
+}
+.cubeBox li:nth-child(5){
+    background: url(images/cubeImg5.png) no-repeat;
+    top:510px;
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-origin:top;
+}
+.cubeBox li:nth-child(6){
+    background: url(images/cubeImg6.png) no-repeat;
+    -webkit-transform: translateZ(-510px);
+}
+
 
 
