@@ -109,10 +109,9 @@ function fnCube(){
         var startY = -45;
         var x = 0;
         var y = 0;
-        var step = 1/2;
         var flag = true;
         cubeBox.style.opacity = 1;
-        cubeBox.style.webkitTransform ='scale(0.7) rotateX(-45deg) rotateY(-45deg)';
+        cubeBox.style.webkitTransform ='scale(0.5) rotateX(-45deg) rotateY(-45deg)';
         cubeBox.addEventListener('webkitTransitionEnd',function(){
             this.style.webkitTransition="";
         },false);
@@ -130,8 +129,8 @@ function fnCube(){
         flag = false;
         var touchMoveX = e.changedTouches[0].pageX;
         var toucheMoveY = e.changedTouches[0].pageY;
-         x = (TouchStart.y - toucheMoveY)*step;
-         y = (touchMoveX - TouchStart.x)*step;
+         x = (TouchStart.y - toucheMoveY);
+         y = (touchMoveX - TouchStart.x);
         if( startX+x > 70 ){
             x = -startX + 70;
         }
@@ -139,7 +138,7 @@ function fnCube(){
             x = -startX - 70;
         }
 
-        cubeBox.style.webkitTransform = 'scale(0.7) rotateX('+(startX+x)+'deg) rotateY('+(startY+y)+'deg)';
+        cubeBox.style.webkitTransform = 'scale(0.5) rotateX('+(startX+x)+'deg) rotateY('+(startY+y)+'deg)';
     }
 
      function cEnd(e){
