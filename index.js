@@ -127,8 +127,6 @@ function fnCube(){
 
     function cMove(e){
         e.preventDefault();
-        this.parentNode.style.webkitTransform = "scale(0.7)  rotateX("+(-startY-this.changePosY)+"deg) rotateY("+(startX+this.changePosX)+"deg)";
-        flag = false;
         var touchMoveX = e.changedTouches[0].pageX;
         var toucheMoveY = e.changedTouches[0].pageY;
          x = (TouchStart.y - toucheMoveY)*step;
