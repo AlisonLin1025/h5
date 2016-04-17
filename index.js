@@ -166,6 +166,8 @@ function fnCube(){
          startY+=this.changePosY;
     }
 }
+document.addEventListener('touchstart',function(){
+},false);
 
 
 
