@@ -121,9 +121,9 @@ function fnCube(){
         document.addEventListener('touchend',cEnd,false);
 		*/
 		[].forEach.call(cubeLis,function(){
-       		arguments[0].addEventListener('touchstart',start,false)
-       		arguments[0].addEventListener('touchmove',move,false)
-       		arguments[0].addEventListener('touchend',end,false);
+       		arguments[0].addEventListener('touchstart',cStart,false)
+       		arguments[0].addEventListener('touchmove',cMove,false)
+       		arguments[0].addEventListener('touchend',cEnd,false);
    		})
     function cStart(e){
         TouchStart.x = e.changedTouches[0].pageX;
