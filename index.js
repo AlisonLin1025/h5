@@ -107,24 +107,19 @@ function fnCube(){
         var TouchStart = {x:0,y:0};
         var startX = -45;
         var startY = -45;
-        //var x = 0;
-        //var y = 0;
-        //var step = 1/2;
-        //var flag = true;
-        //cubeBox.style.opacity = 1;
+        var x = 0;
+        var y = 0;
+        var step = 1/2;
+        var flag = true;
+        cubeBox.style.opacity = 1;
         cubeBox.style.webkitTransform ='scale(0.7) rotateX(-45deg) rotateY(-45deg)';
-        /*cubeBox.addEventListener('webkitTransitionEnd',function(){
+        cubeBox.addEventListener('webkitTransitionEnd',function(){
             this.style.webkitTransition="";
         },false);
         document.addEventListener('touchestart',cStart,false);
         document.addEventListener('touchmove',cMove,false);
         document.addEventListener('touchend',cEnd,false);
-		*/
-		[].forEach.call(cubeLis,function(){
-       		arguments[0].addEventListener('touchstart',cStart,false)
-       		arguments[0].addEventListener('touchmove',cMove,false)
-       		arguments[0].addEventListener('touchend',cEnd,false);
-   		})
+		
     function cStart(e){
         TouchStart.x = e.changedTouches[0].pageX;
         TouchStart.y = e.changedTouches[0].pageY;
@@ -132,13 +127,9 @@ function fnCube(){
 
     function cMove(e){
         e.preventDefault();
-        var moveTouchX = e.changedTouches[0].pageX;
-        var moveTouchY = e.changedTouches[0].pageY;
-        this.changePosX = moveTouchX - startTouch.x;
-        this.changePosY = moveTouchY - startTouch.y;
         this.parentNode.style.webkitTransform = "scale(0.7)  rotateX("+(-startY-this.changePosY)+"deg) rotateY("+(startX+this.changePosX)+"deg)";
-        //flag = false;
-        /*var touchMoveX = e.changedTouches[0].pageX;
+        flag = false;
+        var touchMoveX = e.changedTouches[0].pageX;
         var toucheMoveY = e.changedTouches[0].pageY;
          x = (TouchStart.y - toucheMoveY)*step;
          y = (touchMoveX - TouchStart.x)*step;
@@ -150,24 +141,19 @@ function fnCube(){
         }
 
         cubeBox.style.webkitTransform = 'scale(0.7) rotateX('+(startX+x)+'deg) rotateY('+(startY+y)+'deg)';
-    */
     }
 
      function cEnd(e){
-         /*if(!flag){
+         if(!flag){
              startX+=x;
              startY+=y;
          }
-
          document.removeEventListener('touchstart',cStart,false);
          document.removeEventListener('touchemove',cMove,false);
-         document.removeEventListener('touchend',cEnd,false)*/
-         startX+=this.changePosX;
-         startY+=this.changePosY;
+         document.removeEventListener('touchend',cEnd,false)
     }
 }
-document.addEventListener('touchstart',function(){
-},false);
+
 
 
 
